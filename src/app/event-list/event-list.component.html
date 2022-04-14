@@ -1,0 +1,8 @@
+<h1 id="pageTitle">Event Panel</h1>
+
+<button id="createButton" type="button" class="btn btn-outline-success" routerLink="/add-event">Create New</button>
+<div class="row">
+    <div *ngFor="let event of events" class="shadow-lg col-sm-4 p-3">
+        <app-event-card [event]="event"></app-event-card>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+[
+  {
+  "Id":1,
+  "SellRent":1,
+  "Name":"hiba house",
+  "Type":"House",
+  "roomsNumb":"s+3",
+  "Price":12000,
+  "town":"tunis",
+  "city":"omaran",
+  "addresse":"rue 18",
+  "description":"a big house",
+  "Image":"prop-1"
+},
+{
+  "Id":2,
+  "SellRent":2,
+  "Name":"med house",
+  "Type":"House",
+  "roomsNumb":"s+3",
+  "Price":12000,
+  "town":"béja",
+  "city":"béja sub",
+  "addresse":"ksar bardo",
+  "description":"nice house",
+  "Image":"prop-2"
+},
+{
+  "Id":3,
+  "SellRent":1,
+  "Name":"ali house",
+  "Type":"House",
+  "roomsNumb":"s+3",
+  "Price":13000,
+  "town":"ariana",
+  "city":"ghazella",
+  "addresse":"rue 157",
+  "description":"new house",
+  "Image":"prop-3"
+},
+{
+  "Id":4,
+  "SellRent":2,
+  "Name":"hamdi house",
+  "Type":"House",
+  "roomsNumb":"s+3",
+  "Price":32000,
+  "town":"tunis",
+  "city":"manar",
+  "addresse":"rue 8",
+  "description":"a big house",
+  "Image":"prop-4"
+},
+{
+  "Id":5,
+  "SellRent":1,
+  "Name":"hazem house",
+  "Type":"House",
+  "roomsNumb":"s+3",
+  "Price":12000,
+  "town":"sfax",
+  "city":"sfax west",
+  "addresse":"rue 78",
+  "description":"good house",
+  "Image":"prop-5"
+}
+]

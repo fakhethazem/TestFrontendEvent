@@ -1,0 +1,73 @@
+<div class="card">
+    <div class="card-header">
+        Add your event here
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)='onSubmit()' [formGroup]="addeventForm">
+
+            <div formGroupName="BasicInfo">
+                <div class="form-group col-12">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" formControlName="name" [(ngModel)]="event.name">
+
+                </div>
+                <br>
+
+                <label for="name">Type</label>
+
+                <select type="text" class="form-control" formControlName="type" [(ngModel)]="event.type">
+                   
+                    <option value="Sports">Sports</option>
+                    <option value="Job">Job</option>
+                    </select>
+
+                <br>
+                <div class="form-group col-12">
+                    <label>Description</label>
+                    <input type="text" class="form-control" formControlName="description" [(ngModel)]="event.description">
+                </div>
+                <br>
+                <!-- Dates -->
+                <div class="form-group col-12">
+                    <label>Start date</label> :
+                    <mat-form-field>
+                        <input matInput type="datetime-local" class="form-control" formControlName="date_debut" [(ngModel)]="event.date_debut">
+                    </mat-form-field>
+
+                    <label>End date</label> :
+                    <mat-form-field>
+                        <input matInput type="datetime-local" class="form-control" formControlName="date_fin" [(ngModel)]="event.date_fin">
+                    </mat-form-field>
+                </div>
+
+
+                <br>
+                <div class="form-group col-12">
+                    <label>location</label>
+                    <input type="text" class="form-control" formControlName="location" [(ngModel)]="event.location">
+                </div>
+                <br>
+
+                <br>
+                <!-- logo -->
+                <div class="form-group col-12">
+                    <div class="photo-control">
+                        <div style="margin-top: 2rem;" class="input-group col-md-6 input-group-sm"> <input style=" height: 1.4rem; width: 5rem;" (change)="getFileDetailsPhoto($event)" type="file" nbInput accept="image/png, image/jpeg,image/jfif" name="photoEvent" /> <input type="text" class="form-control" nbInput disabled placeholder="Photo event"
+                                name="photoEvent" value="{{event.name}} photo" /> </div>
+
+                        <div class="col" style=" height: 7rem;"> <img [src]="image" style=" width: auto; height: auto; max-width: 100%; max-height: 100%;"> </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group col-12">
+
+                    <button type="submit" class="btn btn-primary btn-block mr-2" style="margin-right: 1rem;">Save</button>
+                    <button type="reset" class="btn btn-primary btn-block">Cancel</button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

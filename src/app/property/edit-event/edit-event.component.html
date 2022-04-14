@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header">
+        Edit your event here
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)='onSubmit()' [formGroup]="editeventForm">
+
+            <div formGroupName="BasicInfo">
+                <div class="form-group col-12">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" formControlName="name" [(ngModel)]="event.name">
+
+                </div>
+                <br>
+                <div class="form-group col-12">
+                    <label for="name">Type</label>
+                    <input type="text" class="form-control" formControlName="type" [(ngModel)]="event.type">
+                </div>
+                <br>
+                <div class="form-group col-12">
+                    <label>Description</label>
+                    <input type="text" class="form-control" formControlName="description" [(ngModel)]="event.description">
+                </div>
+                <br>
+
+
+                <!-- Dates -->
+                <div class="form-group col-12">
+                    <label>Start date</label> :
+                    <mat-form-field>
+                        <input matInput type="datetime-local" class="form-control" formControlName="date_debut" [(ngModel)]="event.date_debut">
+                    </mat-form-field>
+
+                    <label>End date</label> :
+                    <mat-form-field>
+                        <input matInput type="datetime-local" class="form-control" formControlName="date_fin" [(ngModel)]="event.date_fin">
+                    </mat-form-field>
+                </div>
+
+
+                <br>
+                <div class="form-group col-12">
+                    <label>location</label>
+                    <input type="text" class="form-control" formControlName="location" [(ngModel)]="event.location">
+                </div>
+                <br>
+
+                <br>
+
+                <div class="form-group col-12">
+
+                    <button type="submit" class="btn btn-primary btn-block mr-2" style="margin-right: 1rem;">update</button>
+                    <button routerLink="/" type="reset" class="btn btn-primary btn-block">Cancel</button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

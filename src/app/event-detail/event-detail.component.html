@@ -1,0 +1,87 @@
+<div class="row shadow">
+    <div class="col-sm-4 p-0">
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img class="card-img-top" src="http://localhost:3000/images/uploads/{{event.logo}}">
+            </div>
+            <div class="card-body">
+
+
+            </div>
+            <div class="card-footer">
+                <div class="stars">
+                    <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'"></ngx-star-rating>
+                </div>
+                <button (click)="saveRate()" type="button" class="btn btn-outline-primary btn-sm tableBTN">Rate this</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div clas="card-body">
+            <div heading="Overview"></div>
+
+            <div>
+
+                <h2>
+
+                    <strong>Name</strong> : {{event.name}}
+                    <button mdbBtn color="info" class="action-button" (click)="actionOnRequest()">Join</button>
+                </h2>
+            </div>
+
+
+
+            <div>
+                <strong>Type</strong> : {{event.type}}
+            </div>
+
+            <br>
+
+            <div>
+                <strong>Description</strong> : {{event.description}}
+            </div>
+            <br>
+            <div>
+                <strong>Location</strong> : {{event.location}}
+            </div>
+            <br>
+
+            <br>
+            <div>
+                <strong>Start Date</strong> : {{event.date_debut | date: 'dd/MM/yyyy HH:mm'}}
+            </div>
+
+            <div>
+                <strong>End Date</strong> : {{event.date_fin | date: 'dd/MM/yyyy HH:mm'}}
+            </div>
+            <br>
+            <br>
+            <br>
+            <h4> <strong>Rating :</strong> <span class="font-highlight"> {{result}} / 5 </span></h4>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+<a class="btn btn-secondary" href="mailto:{{email.to}}?subject={{email.subject}}&body={{email.body}}">plan a visit</a>
+-->

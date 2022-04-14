@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-img-wrapper">
+        <img *ngIf="event.Image" class="card-img-top frame " src="http://localhost:3000/images/uploads/{{event.logo}}">
+        <img *ngIf="!event.Image" class="card-img-top" src="http://localhost:3000/images/uploads/{{event.logo}}">
+        <ul class="list-inline text-center member-icons animate">
+
+            <li class="list-inline-item">
+                <button class="btn btn-primary" routerLink="/event-detail/{{event._id}}"><img src="http://localhost:3000/images/uploads/{{event.logo}}"/></button>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body p-2">
+        <h2>{{event.name}}</h2>
+        <strong>Start Date</strong> : {{event.date_debut | date: 'dd/MM/yyyy HH:mm'}}
+        <br>
+        <strong>End Date</strong> : {{event.date_fin | date: 'dd/MM/yyyy HH:mm'}}
+        <hr class="mt-0 mb-2">
+        <h4><span class="font-highlight"> {{event.location}} </span> </h4>
+
+    </div>
+    <div class="buttonBox">
+        <button routerLink="/edit-event/{{event._id}}" type="button" class="btn btn-outline-primary btn-sm tableBTN">Edit</button>
+        <button (click)="deleteButtonPress(event._id)" type="button" class="btn btn-outline-danger btn-sm tableBTN" data-toggle="modal" data-target="#myModal" data-backdrop="true">Delete</button>
+    </div>
+
+</div>
